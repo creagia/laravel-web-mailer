@@ -11,6 +11,9 @@ The emails will be stored as a file in the storage folder.
 
 <p align="center"><img src="/art/screenshot.webp" alt="Inbox screenshot"></p>
 
+## Support us
+[<img width="570" alt="Laradir banner" src="https://user-images.githubusercontent.com/240932/189903723-2c015907-b8c9-4ff7-b6e6-2c8cf10aea16.png">](https://laradir.com/?utm_campaign=github&utm_medium=banner&utm_term=laravel-web-mailer)
+
 ## Requirements
 This package requires PHP 8.1 and Laravel 9. If you need compatibility with older versions,
 check the [alternatives](#alternatives) section.
