@@ -59,7 +59,7 @@ class LaravelWebMailController
             ->toArray();
 
         return response()->json((object)[
-            'sentAtFormatted' => $laravelWebMailDto->sentAt->format('Y-m-d H:m'),
+            'sentAtFormatted' => $laravelWebMailDto->sentAt->format('Y-m-d H:i'),
             'eml' => $this->laravelWebMailRepository->findEml($messageId),
             'attachments' => $attachments,
             'messageId' => $laravelWebMailDto->messageId,
