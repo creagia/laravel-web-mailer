@@ -53,6 +53,9 @@
             },
             async retrieveMails() {
                 this.mails = await (await fetch("{{ route('laravelWebMailer.fetchAll') }}")).json();
+                if (this.mails.length === 0) {
+                    this.currentMail = false;
+                }
             },
             async confirmAndDeleteAllMails() {
                 if (!confirm('Are you sure you want to delete all emails?')) {
@@ -130,7 +133,7 @@
                      @click="showMail(index)"
                      :class="{'bg-neutral-100' : mail.isRead, 'border-x-blue-500' : (mail.messageId===currentMail.messageId), 'border-x-transparent' : (mail.messageId!==currentMail.messageId) }"
                 >
-                    <div class="flex">
+                    <div class="flex justify-between">
                         <div class="text-sm leading-tight" :class="{'font-bold' : !mail.isRead}"
                              x-text="mail.subject"></div>
                         <div x-show="mail.hasAttachments">
