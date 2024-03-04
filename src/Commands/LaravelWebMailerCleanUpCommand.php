@@ -23,7 +23,7 @@ class LaravelWebMailerCleanUpCommand extends Command
         $laravelWebMailRepository
             ->all()
             ->filter(
-                fn (LaravelWebMailDto $laravelWebMailDto) => $currentTime->diffInDays($laravelWebMailDto->sentAt) > $numberOfDays
+                fn (LaravelWebMailDto $laravelWebMailDto) => $laravelWebMailDto->sentAt->diffInDays($currentTime) > $numberOfDays
             )
             ->each(fn (LaravelWebMailDto $laravelWebMailDto) => $laravelWebMailRepository->delete($laravelWebMailDto->messageId));
 
