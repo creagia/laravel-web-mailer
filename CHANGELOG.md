@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-web-mailer` will be documented in this file.
 
+## 1.0.3 - 2024-03-04
+
+### What's Changed
+
+* Laravel 11.x Compatibility by @laravel-shift in https://github.com/creagia/laravel-web-mailer/pull/12
+
+### New Contributors
+
+* @laravel-shift made their first contribution in https://github.com/creagia/laravel-web-mailer/pull/12
+
+**Full Changelog**: https://github.com/creagia/laravel-web-mailer/compare/1.0.2...1.0.3
+
 ## 1.0.2 - 2023-02-15
 
 ### What's Changed
