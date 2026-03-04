@@ -28,10 +28,9 @@ class LaravelWebMailerServiceProvider extends PackageServiceProvider
             ]);
     }
 
-    public function packageRegistered(): void
+    public function packageBooted(): void
     {
-        $this->app->afterResolving('mail.manager', function (MailManager $mailManager) {
-            $mailManager->extend('web', fn (array $config = []) => app(LaravelWebMailerTransport::class));
-        });
+        $this->app->make(MailManager::class)
+            ->extend('web', fn (array $config = []) => app(LaravelWebMailerTransport::class));
     }
 }
