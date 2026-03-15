@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-web-mailer` will be documented in this file.
 
+## 2.0.0 - 2026-03-15
+
+### What's Changed
+
+* Add Laravel 13 and PHP 8.5 support, drop Laravel 9/10 by @dtorras in https://github.com/creagia/laravel-web-mailer/pull/25
+* Simplify mail transport registration by @dtorras in https://github.com/creagia/laravel-web-mailer/pull/26
+
+**Full Changelog**: https://github.com/creagia/laravel-web-mailer/compare/1.0.4...2.0.0
+
 ## 1.0.4 - 2025-02-25
 
 ### What's Changed
