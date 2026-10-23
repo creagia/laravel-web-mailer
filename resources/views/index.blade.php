@@ -16,9 +16,6 @@
             init() {
                 this.retrieveMails();
                 this.initPolling();
-                this.$watch('currentMail.htmlBody', (htmlContent) => {
-                    this.fillHtmlTabIframe(htmlContent)
-                });
             },
             initPolling() {
                 setInterval(() => this.retrieveMails(), this.timer);
@@ -44,7 +41,7 @@
                     })
                     .then((json) => {
                         this.currentMail = json
-                        this.fillHtmlTabIframe();
+                        this.fillHtmlTabIframe(json.htmlBody ?? '');
                     })
                     .catch(error => {
                         alert(error);
